@@ -11,6 +11,7 @@
 <body>
 <h3><a href="index.html">Home</a></h3>
 <hr>
+<h3><a href="add">Add</a></h3>
 <h2>Meals</h2>
 <table border="1" style="border-collapse:collapse;">
     <%--    <colgroup>--%>
