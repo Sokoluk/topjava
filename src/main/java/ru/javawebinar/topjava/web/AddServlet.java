@@ -20,5 +20,6 @@ public class AddServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         log.debug("redirect to Add");
 
+        req.getRequestDispatcher("/add.jsp").forward(req, resp);
     }
 }
