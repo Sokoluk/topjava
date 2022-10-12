@@ -1,6 +1,7 @@
 package ru.javawebinar.topjava.web;
 
 import org.slf4j.Logger;
+import ru.javawebinar.topjava.util.Initialization;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,7 +19,17 @@ public class AddServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        log.debug("redirect to Add");
+        log.debug("redirect to Add(GET)");
+
+        req.getRequestDispatcher("/add.jsp").forward(req, resp);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        log.debug("redirect to Add(POST)");
+        req.setCharacterEncoding("UTF-8");
+
+        Initialization.add(req.getParameter("dateTime"),req.getParameter("description"),req.getParameter("calories"));
 
         req.getRequestDispatcher("/add.jsp").forward(req, resp);
     }
