@@ -30,7 +30,17 @@
             <td><fmt:formatDate value="${myParseDate}" pattern="yyyy-MM-dd HH:mm"></fmt:formatDate></td>
             <td>${i.getDescription()}</td>
             <td>${i.getCalories()}</td>
-            <td><p><a href="/topjava/edit?id=${i.getId()}">Edit</a></p></td>
+            <td><p><a href="/topjava/edit?id=${i.getId()}" style="margin-left: 5px; margin-right: 5px">Edit</a></p></td>
+            <td>
+                                  <div style="margin-top: 16px; margin-left: 5px; margin-right: 5px"><form method="post" action="/topjava/delete">
+                                      <input type="submit" value="Delete"/>
+                                      <input type="number" hidden name="id" value="${i.getId()}">
+                                  </form></div>
+<%--                <div style="margin-top: 16px; margin-left: 5px; margin-right: 5px"><form name="submitForm" method="POST" action="/topjava/delete">--%>
+<%--                    <input type="hidden" name="id" value="${i.getId()}">--%>
+<%--                    <a HREF="javascript:document.submitForm.submit()">Delete</a>--%>
+<%--                </form></div>--%>
+            </td>
         <tr/>
     </c:forEach>
 </table>

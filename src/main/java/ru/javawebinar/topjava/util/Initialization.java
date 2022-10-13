@@ -44,4 +44,7 @@ public class Initialization {
 
     }
 
+    public static void delete(String id) {
+        mealList.remove(Integer.parseInt(id));
+    }
 }

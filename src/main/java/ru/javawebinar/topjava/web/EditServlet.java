@@ -21,7 +21,6 @@ public class EditServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         log.debug("redirect to Edit(GET)");
 
-        System.out.println(req.getParameter("id"));
         req.setAttribute("meal",Initialization.getMealList().get(Integer.parseInt(req.getParameter("id"))));
 
         req.getRequestDispatcher("/edit.jsp").forward(req, resp);
@@ -33,8 +32,6 @@ public class EditServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         log.debug("redirect to Edit(POST)");
         req.setCharacterEncoding("UTF-8");
-
-        System.out.println(req.getParameter("id"));
 
         Initialization.edit(req.getParameter("id"),req.getParameter("dateTime"),
                 req.getParameter("description"),req.getParameter("calories"));
