@@ -4,10 +4,10 @@
     <title>Add</title>
 </head>
 <body>
-<h3><a href="index.html">Home</a></h3>
+<h3><a href="http://localhost:8080/index.html">Home</a></h3>
 <hr>
-<h2>Edit meal</h2>
-<form method="POST" action="add">
+<h2>Add meal</h2>
+<form method="POST" action="/topjava/add">
   <label for="dateTime">DateTime:</label>
   <input type="datetime-local" id="dateTime" name="dateTime"/>
   <br/>
@@ -21,7 +21,7 @@
   <br/>
   <br/>
   <input type="submit" value="Save"/>
-  <input type="button" onclick="window.location.href = 'topjava'" value="Cancel"/>
+  <input type="button" onclick="window.location.href = 'http://localhost:8080/topjava'" value="Cancel"/>
 </form>
 </body>
 </html>

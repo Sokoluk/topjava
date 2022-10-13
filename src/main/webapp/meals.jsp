@@ -11,7 +11,7 @@
 <body>
 <h3><a href="index.html">Home</a></h3>
 <hr>
-<h3><a href="add">Add</a></h3>
+<h3><a href="topjava/add">Add</a></h3>
 <h2>Meals</h2>
 <table border="1" style="border-collapse:collapse;">
     <%--    <colgroup>--%>
@@ -30,6 +30,7 @@
             <td><fmt:formatDate value="${myParseDate}" pattern="yyyy-MM-dd HH:mm"></fmt:formatDate></td>
             <td>${i.getDescription()}</td>
             <td>${i.getCalories()}</td>
+            <td><p><a href="/topjava/edit?id=${i.getId()}">Edit</a></p></td>
         <tr/>
     </c:forEach>
 </table>

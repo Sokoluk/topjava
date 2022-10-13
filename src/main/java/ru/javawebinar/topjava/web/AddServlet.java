@@ -12,7 +12,7 @@ import java.io.IOException;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
-@WebServlet("/add")
+@WebServlet("/topjava/add")
 public class AddServlet extends HttpServlet {
 
     private static final Logger log = getLogger(AddServlet.class);
